@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { playeurs } from 'src/app/mock/mock';
 
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
