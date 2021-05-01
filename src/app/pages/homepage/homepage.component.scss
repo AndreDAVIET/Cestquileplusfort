@@ -55,26 +55,35 @@ tr{
     height : 2em
 }
 
-input {
-    margin-bottom: 5px;
-    background-color: #333;
-    color: white;
-    width: 100%;
-    box-sizing: border-box;
+:host ::ng-deep .dark-panel.p-button{
+    background-color: #0BEDEC !important;
+    font-family: bitoperator;
+    color : black;
+    margin: 2.5%;
 }
 
-form {
-    display: block;
-    z-index: 100;
-    margin: 50px auto;
-    width: 300px;
+:host ::ng-deep .dark-panel.p-inputNumber{
+    background-color: #1f1f1f;
+    color: gray;
+    margin: 5px;;
 }
 
-input[type="submit"] {
-    width: 100%;
-    border: none;
-    background-color: cyan;
-    color: black;
-    padding: 10px;
+.p-inputNumber{
+    background-color: #1f1f1f;
+    color: gray;
+    margin: 5px;; 
 }
 
+.forms{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+
+    input  {
+        background-color: #1f1f1f;
+        color: gray;
+        margin: 5px;;
+    }
+    
+}
