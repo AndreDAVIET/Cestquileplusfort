@@ -1,6 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyD-C89lKgwHWupjUBEZM1d0OodnYE-dmHc",
+      authDomain: "c-estquileplusfort.firebaseapp.com",
+      projectId: "c-estquileplusfort",
+      storageBucket: "c-estquileplusfort.appspot.com",
+      messagingSenderId: "578816075482",
+      appId: "1:578816075482:web:3bd5920f0ff5faf57e67e3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
   <meta charset="utf-8">
   <title>CestquileplusfortFront</title>
   <base href="/">
