@@ -14,23 +14,15 @@ export class HomepageComponent implements OnInit {
   lists = playeurs;
   paymentHandler:any = null;
   stripe : any;
-  _totalAmount: number;
-  card: any;
-  cardError: string | undefined | null;
 
-  @ViewChild('cardInfo') cardInfo: ElementRef | any;
   handler: any = null;
 
-  constructor(private cd: ChangeDetectorRef,
-    @Inject(MAT_DIALOG_DATA) private data: any,
-    private dialogRef: MatDialogRef<HomepageComponent>,) {
-    this._totalAmount = data['totalAmount'];
+  constructor() {
   }
 
   ngOnInit(): void {
     this.sortList();
     this.invokeStripe();    
-    //this.loadStripe();
     this.stripe = Stripe('pk_test_51ImKotFySxZUvgN6RoqPFmdhDAhDrj2sStm0sTbdbOpWOaBCtCPiLKAEnZF2EtT2Z4DeCOJh8WO7nSjHqz1bi1pA00qh7ZXnkh')
   }
 
@@ -51,8 +43,8 @@ export class HomepageComponent implements OnInit {
     });
   
     paymentHandler.open({
-      name: 'Positronx',
-      description: '3 widgets',
+      name: "C'est qui le plus fort?",
+      description: 'Découvre ensuite qui est le plus fort',
       amount: amount * 100
     });
   }
@@ -71,7 +63,7 @@ export class HomepageComponent implements OnInit {
           locale: 'auto',
           token: function (stripeToken: any) {
             console.log(stripeToken)
-            alert('Payment has bhttps://checkout.stripe.com/checkout.jseen successfull!');
+            alert('Payment has been successfull!');
           }
         });
       }

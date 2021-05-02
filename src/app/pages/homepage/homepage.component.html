@@ -36,24 +36,10 @@
                 <input type="text" name="url" id="url" value="" placeholder="Link to your site">
                 <input type="text" name="email" id="email" value="" placeholder="email@example.com">
             </form>
-            <!-- <div class="col-md-5 mb-2">
+            <div class="col-md-5 mb-2">
                 <button (click)="makePayment(15)" class="btn btn-danger btn-block">Pay $15</button>
-              </div> -->
+            </div> 
 
-
-              <form (ngSubmit)="makePayment(15)" class="checkout">
-                <label for="card-info">Card Info</label>
-            <div id="form-field">
-                    <div id="card-info" #cardInfo></div>
-                    <button id="submit-button" type="submit">
-                        Pay ${{_totalAmount}}
-                    </button>
-                    <mat-error id="card-errors" role="alert" *ngIf="cardError">
-                        <mat-icon style="color: #f44336">cancel</mat-icon>
-                        &nbsp;{{ cardError }}
-                    </mat-error>
-                </div>
-            </form>
         </div>
     </div>
 </div>
